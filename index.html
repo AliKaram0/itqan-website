@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://itqansolutions.org/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Itqan Solutions" />
+  <meta property="og:title" content="Itqan Solutions — Software • POS • Websites • Marketing" />
+  <meta property="og:description" content="Software development, POS systems (online/offline), websites, and full digital marketing services." />
+  <meta property="og:url" content="https://itqansolutions.org/" />
+  <meta property="og:image" content="media/og-cover.jpg" />
+  <meta property="og:image:alt" content="Itqan Solutions brand cover" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_EG" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Itqan Solutions — Software • POS • Websites • Marketing" />
+  <meta name="twitter:description" content="Software development, POS systems (online/offline), websites, and full digital marketing services." />
+  <meta name="twitter:image" content="media/og-cover.jpg" />
+
+  <!-- Preload / Preconnect -->
+  <link rel="preload" as="image" href="media/hero-poster.jpg" imagesrcset="media/hero-poster.jpg 1x" />
+  <!-- مهم: مسار نسبي للخط وبدون crossorigin على file:// -->
+  <link rel="preload" as="font" href="fonts/mokoto.woff2" type="font/woff2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Itqan Solutions — We Do Everything the itqan way</title>
+  <meta name="description" content="Itqan Solutions — Software development, POS systems (online/offline), websites, and full digital marketing services." />
+  <meta name="theme-color" content="#1F2F56" />
+
+  <!-- Favicons (مسارات نسبية) -->
+  <link rel="icon" type="image/svg+xml" href="media/itqan-favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/itqan-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="media/itqan-192.png">
+  <link rel="apple-touch-icon" href="media/itqan-192.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Itqan Solutions",
+    "url": "https://itqansolutions.org/",
+    "logo": "https://itqansolutions.org/media/itqan-logo.svg",
+    "email": "info@itqansolutions.org",
+    "telephone": "+20 11 55253886",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Maadi",
+      "addressRegion": "Cairo",
+      "addressCountry": "EG"
+    },
+    "sameAs": [
+      "https://web.facebook.com/profile.php?id=61579221034971&_rdc=1&_rdr#",
+      "https://www.instagram.com/itqansolutions/",
+      "https://www.linkedin.com/company/itqansolutions/about/?viewAsMember=true"
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'Mokoto';
+      src: url('fonts/mokoto.woff2') format('woff2'),
+           url('fonts/mokoto.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --navy: #1F2F56;
+      --teal: #2CB1BC;
+      --dark: #333333;
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --neon-purple: #a7a1ff;
+      --neon-cyan: #5cf2ff;
+      --bg: #0b1020;
+      --muted: #7b86a3;
+      --ring: rgba(44, 177, 188, 0.35);
+      --card: #151c2f;
+      --card-2: #121a2a;
+      --gradient: radial-gradient(800px 400px at 10% -10%, rgba(92, 242, 255, 0.15), transparent 60%),
+                  radial-gradient(800px 400px at 110% 10%, rgba(167, 161, 255, 0.15), transparent 60%),
+                  linear-gradient(180deg, #0b1020 0%, #0b1020 60%, #0a1022 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Mokoto', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: var(--gradient);
+      color: var(--white);
+      line-height: 1.6;
+    }
+    html[dir="rtl"] body {
+      font-family: 'Tajawal', system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Kufi Arabic";
+    }
+
+    a { color: var(--neon-cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: min(1200px, 92%); margin: 0 auto; }
+
+
+
+    /* Preloader */
+    .loader {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #0b1020;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity .6s ease;
+    }
+    .loader img { width: 90px; height: 90px; animation: pulse 2s infinite; }
+    .loader span { margin-top: 10px; color: #5cf2ff; font-weight: 600; letter-spacing:1px; }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.15);opacity:.7} }
+    .loader.hide { opacity:0; pointer-events:none; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: rgba(15, 20, 40, 0.6);
+      border-bottom: 1px solid rgba(167,161,255,0.15);
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.3px; }
+    .logo { width:38px; height:38px; border-radius:10px; object-fit:contain; display:block; background:transparent; box-shadow:0 0 0 4px rgba(44,177,188,.12), 0 8px 30px rgba(167,161,255,.15); }
+    .brand .name { font-size:1.05rem; }
+    .brand .slogan { color:var(--muted); font-weight:500; font-size:.86rem; }
+
+    .menu { display:flex; gap:18px; align-items:center; }
+    .menu a { color:#dbe8ff; font-weight:600; opacity:.95; padding:6px 0; border-bottom:2px solid transparent; transition: opacity .15s ease, border-color .2s ease; } 
+    .menu a.active { color:#fff; border-color: var(--neon-cyan); }
+
+    .lang-toggle, .btn {
+      border: 1px solid rgba(167,161,255,0.25);
+      background: linear-gradient(180deg, rgba(167,161,255,0.12), rgba(92,242,255,0.1));
+      color: var(--white);
+      padding: 10px 14px; border-radius: 12px; cursor: pointer; font-weight: 600;
+      transition: transform .15s ease, box-shadow .15s ease; white-space: nowrap;
+    }
+    .btn-primary {
+      border: 1px solid rgba(92,242,255,0.5);
+      background: linear-gradient(180deg, rgba(92,242,255,0.18), rgba(92,242,255,0.08));
+      box-shadow: 0 8px 30px rgba(92,242,255,0.18);
+    }
+    .btn:hover, .lang-toggle:hover { transform: translateY(-1px); box-shadow: 0 6px 18px var(--ring); }
+
+    /* Hero */
+    .hero { padding:72px 0 48px; position:relative; overflow:hidden; min-height:78vh; }
+    .hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:-2; filter:saturate(115%) contrast(105%); pointer-events:none; }
+    .hero .overlay { position:absolute; inset:0; z-index:-1; background: linear-gradient(180deg, rgba(10,12,22,.55), rgba(10,12,22,.55)); backdrop-filter: blur(1px); }
+    .hero-grid { display:grid; grid-template-columns: 1.15fr 0.85fr; gap:28px; align-items:center; position:relative; }
+
+    /* Animations */
+    .reveal { opacity:0; transform:translateY(22px); will-change:transform,opacity; transition:opacity .7s ease, transform .7s ease; }
+    .reveal-left { transform: translateX(-28px); }
+    .reveal-right { transform: translateX(28px); }
+    .reveal-visible { opacity:1 !important; transform: translateX(0) translateY(0) !important; }
+
+    /* Layout & components */
+    .eyebrow { color:var(--neon-cyan); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:.85rem; }
+    .title { font-size:clamp(1.8rem, 3.2vw, 3rem); line-height:1.15; margin:10px 0; font-weight:800; }
+    .subtitle { color:#d1d8ea; max-width:58ch; }
+    .cta { margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+    .card { background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); border:1px solid rgba(167,161,255,.14); box-shadow:0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05); border-radius:18px; padding:22px; }
+    .badges { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .badge { padding:6px 10px; border-radius:999px; border:1px solid rgba(92,242,255,.35); color:#e6fbff; font-size:.82rem; background: rgba(92,242,255,.06); }
+    section { padding:54px 0; }
+    section[id] { scroll-margin-top:90px; }
+    html { scroll-behavior:smooth; }
+    .section-title { font-size:clamp(1.4rem, 2.2vw, 2rem); margin:0 0 8px; font-weight:800; }
+    .section-note { color:#c7d3f0; margin-bottom:22px; }
+    .grid { display:grid; gap:18px; }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .service { display:flex; flex-direction:column; gap:10px; min-height:180px; position:relative; }
+    .service h3 { margin:0; font-size:1.08rem; }
+    .service p { color:#d6dcf3; margin:0 0 8px; }
+/* About section layout */
+/* === About layout (ثابت) === */
+.about{
+  display: grid !important;
+  grid-template-columns: minmax(320px, 1fr) minmax(420px, 1fr) !important;
+  align-items: center !important;
+  gap: 24px !important;
+}
+
+/* خلي الصورة ثابتة في العمود التاني على الشاشات الواسعة */
+.about > :first-child { order: 1; }
+.about-image { order: 2; }
+
+/* الصورة نفسها */
+.about-image img{
+  display: block !important;
+  width: 100% !important;
+  max-width: 560px !important;  /* كفاية وضوح بدون ما تبقى عملاقة */
+  height: auto !important;
+  border-radius: 12px !important;
+  object-fit: cover !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+  margin-inline: auto;           /* تبقى في النص جوه العمود */
+}
+
+/* موبـايل: عمود واحد */
+@media (max-width: 980px){
+  .about{
+    grid-template-columns: 1fr !important;
+  }
+  .about > :first-child { order: 2; }  /* النص تحت */
+  .about-image { order: 1; }           /* الصورة فوق */
+  .about-image img{ max-width: 100% !important; }
+}
+
+
+    .contact-cta { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; }
+    .contact-cta p { margin:0; color:#d6dcf3; }
+    .contact-form { margin-top:16px; }
+    .contact-form label { display:flex; flex-direction:column; gap:6px; color:#d6dcf3; }
+    .contact-form input, .contact-form textarea, .contact-form select { background:#0f182b; border:1px solid rgba(167,161,255,.18); color:#fff; padding:12px 12px; border-radius:12px; outline:none; box-shadow: inset 0 1px 0 rgba(255,255,255,.04); }
+    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color:var(--neon-cyan); box-shadow:0 0 0 4px rgba(92,242,255,.15); }
+    .contact-form .consent { align-items:center; flex-direction:row; gap:10px; margin:8px 0 2px; }
+    footer { padding:26px 0 40px; border-top:1px solid rgba(167,161,255,.14); color:#cbd6f5; }
+    .f-grid { display:grid; grid-template-columns:1fr auto; align-items:center; gap:14px; }
+    .social { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .social a { border:1px solid rgba(167,161,255,.25); padding:6px 10px; border-radius:10px; }
+
+    /* Mobile */
+    @media (max-width:980px){
+      .hero-grid { grid-template-columns:1fr; }
+      .menu { display:flex; flex-wrap:wrap; gap:12px; }
+      .hero { min-height:62vh; }
+      .f-grid { grid-template-columns:1fr; text-align:center; }
+      .social { justify-content:center; }
+    }
+  </style>
+</head>
+<body>
+  <div id="appLoader" class="loader" aria-live="polite" aria-busy="true">
+    <img src="media/itqan-logo.svg" alt="Itqan logo" decoding="async" />
+    <span data-i18n="loading">Loading...</span>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img class="logo" src="media/itqan-logo.svg" alt="Itqan Solutions logo" decoding="async" />
+        <div>
+          <div class="name">Itqan Solutions</div>
+          <div class="slogan" data-i18n="slogan">We Do Everything the itqan way.</div>
+        </div>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#home" data-section="home" data-i18n="nav_home">Home</a>
+        <a href="#services" data-section="services" data-i18n="nav_services">Services</a>
+        <a href="#about" data-section="about" data-i18n="nav_about">About</a>
+        <a href="#contact" data-section="contact" data-i18n="nav_contact">Contact</a>
+        <a href="mailto:info@itqansolutions.org" class="btn" style="padding:8px 12px">info@itqansolutions.org</a>
+        <button class="btn lang-toggle" id="langToggle" type="button" aria-label="Switch language to Arabic">AR</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero" aria-label="Hero">
+      <!-- Preload فيديو بمسار نسبي -->
+      <link rel="preload" as="video" href="media/itqan-hero.mp4" type="video/mp4">
+      <video class="hero-bg" id="heroVideo"
+        autoplay muted loop playsinline webkit-playsinline
+        preload="metadata" poster="media/hero-poster.jpg">
+        <source src="media/itqan-hero.mp4" type="video/mp4">
+        <!-- اختياري: لو عملت WebM -->
+        <!-- <source src="media/itqan-hero.webm" type="video/webm"> -->
+      </video>
+      <div class="overlay" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow" data-i18n="eyebrow">Software • POS • Websites • Marketing</div>
+          <h1 class="title" data-i18n="hero_title">Build fast. Sell smarter. Market better.</h1>
+          <p class="subtitle" data-i18n="hero_sub">We deliver end-to-end solutions: offline/online POS, custom websites, and complete digital marketing — all crafted to grow your business.</p>
+          <div class="badges">
+            <span class="badge" data-i18n="badge_pos">POS (Offline/Online)</span>
+            <span class="badge" data-i18n="badge_web">Web Development</span>
+            <span class="badge" data-i18n="badge_mkt">Digital Marketing</span>
+          </div>
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact" data-i18n="cta_talk">Talk to us</a>
+            <a class="btn" href="#services" data-i18n="cta_services">Explore services</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0" data-i18n="card_title">What we deliver</h3>
+          <ul style="margin:10px 0 0 18px; color:#e7edff">
+            <li data-i18n="card_li1">Point of Sale systems with licensing & multi-language support</li>
+            <li data-i18n="card_li2">Modern, fast websites (landing pages, company sites, catalogs)</li>
+            <li data-i18n="card_li3">Full digital marketing (strategy, content, ads, analytics)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container">
+      <h2 class="section-title" data-i18n="services_title">Our Services</h2>
+      <p class="section-note" data-i18n="services_note">Pick what you need now — scale later.</p>
+
+      <div class="grid grid-3">
+        <article class="card service reveal reveal-left">
+          <h3 data-i18n="svc_pos_title">POS Systems</h3>
+          <p data-i18n="svc_pos_desc">Offline/online POS with licensing, Arabic/English UI, receipts, reports, and stock control.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+
+        <article class="card service reveal reveal-right">
+          <h3 data-i18n="svc_web_title">Websites</h3>
+          <p data-i18n="svc_web_desc">Company sites, landing pages, and product catalogs with SEO and blazing performance.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+
+        <article class="card service reveal reveal-right">
+          <h3 data-i18n="svc_mkt_title">Digital Marketing</h3>
+          <p data-i18n="svc_mkt_desc">Strategy, content, and ads to drive leads on all major platforms with clear reporting.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+
+        <article class="card service reveal reveal-left">
+          <h3 data-i18n="svc_apps_title">Mobile Apps</h3>
+          <p data-i18n="svc_apps_desc">iOS/Android apps with modern stacks and smooth UX.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+
+        <article class="card service reveal reveal-right">
+          <h3 data-i18n="svc_ecom_title">E-commerce</h3>
+          <p data-i18n="svc_ecom_desc">Stores, payments, shipping integrations, and inventory sync.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+
+        <article class="card service reveal reveal-right">
+          <h3 data-i18n="svc_brand_title">Branding & Design</h3>
+          <p data-i18n="svc_brand_desc">Logos, brand systems, and marketing assets that stand out.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+
+        <article class="card service reveal reveal-left">
+          <h3 data-i18n="svc_seo_title">SEO & Analytics</h3>
+          <p data-i18n="svc_seo_desc">Technical SEO, content, and dashboards to track ROI.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+
+        <article class="card service reveal reveal-right">
+          <h3 data-i18n="svc_cloud_title">Cloud & DevOps</h3>
+          <p data-i18n="svc_cloud_desc">Deployments, CI/CD, monitoring, and cost optimization.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+
+        <article class="card service reveal reveal-right">
+          <h3 data-i18n="svc_support_title">Maintenance & Support</h3>
+          <p data-i18n="svc_support_desc">SLAs, updates, security patches, and performance tuning.</p>
+          <a class="btn" href="#contact" data-i18n="svc_btn">Get a quote</a>
+        </article>
+      </div>
+    </section>
+
+   <section id="about" class="container">
+  <div class="about reveal reveal-left">
+    <div>
+      <h2 class="section-title" data-i18n="about_title">About Itqan</h2>
+      <p class="section-note" data-i18n="about_note">
+        5+ years building solid solutions for growing businesses.
+      </p>
+      <p data-i18n="about_p1">
+        We are a Cairo-based team delivering software, POS systems, websites, and full-stack marketing. We believe technology is the key to growth and excellence.
+      </p>
+      <p data-i18n="about_p2">
+        From concept to launch, we handle the whole journey with reliability, speed, and measurable results.
+      </p>
+    </div>
+
+    <!-- هنا مكان الصورة -->
+    <div class="about-image">
+  <img src="media/about-us.jpg"
+       alt="About Itqan Solutions"
+       loading="lazy" decoding="async" />
+</div>
+
+  </div>
+</section>
+
+
+    <section id="contact" class="container">
+      <div class="card contact-cta reveal reveal-right">
+        <p data-i18n="contact_text">Ready to start? Reach us on WhatsApp or email and we’ll get back fast.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://wa.me/201155253886" target="_blank" rel="noopener" data-i18n="contact_whatsapp">WhatsApp</a>
+          <a class="btn" href="mailto:info@itqansolutions.org" data-i18n="contact_email">Email us</a>
+          <a class="btn" href="tel:+201126522373">Call +20 11 265 22373</a>
+          <a class="btn" href="tel:+201155253886">Call +20 11 5525 3886</a>
+        </div>
+      </div>
+
+      <form class="card contact-form reveal reveal-left" action="https://formsubmit.co/info@itqansolutions.org" method="POST">
+        <input type="hidden" name="_subject" value="New message from Itqan website" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="/thank-you.html" />
+
+        <div class="grid grid-2">
+          <label>
+            <span data-i18n="form_name">Your name</span>
+            <input name="name" type="text" required data-i18n-placeholder="ph_name" placeholder="John Doe" />
+          </label>
+          <label>
+            <span data-i18n="form_email">Email</span>
+            <input name="email" type="email" required data-i18n-placeholder="ph_email" placeholder="you@email.com" />
+          </label>
+        </div>
+        <div class="grid grid-2">
+          <label>
+            <span data-i18n="form_phone">Phone (optional)</span>
+            <input name="phone" type="tel" data-i18n-placeholder="ph_phone" placeholder="+20 ..." />
+          </label>
+          <label>
+            <span data-i18n="form_service">Service</span>
+            <select name="service">
+              <option data-i18n="opt_pos">POS Systems</option>
+              <option data-i18n="opt_web">Websites</option>
+              <option data-i18n="opt_mkt">Digital Marketing</option>
+              <option data-i18n="opt_other">Other</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          <span data-i18n="form_message">Your message</span>
+          <textarea name="message" rows="5" required data-i18n-placeholder="ph_message" placeholder="Tell us about your project..."></textarea>
+        </label>
+        <label class="consent">
+          <input type="checkbox" name="consent" value="yes" required />
+          <span data-i18n="form_consent">I agree to be contacted by Itqan via email/phone.</span>
+        </label>
+        <button class="btn btn-primary" type="submit" data-i18n="form_send">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container f-grid">
+      <small>© <span id="year"></span> Itqan Solutions · <a href="mailto:info@itqansolutions.org">info@itqansolutions.org</a></small>
+      <small>
+        <a href="tel:+201126522373">+201126522373</a> ·
+        <a href="tel:+201155253886">+201155253886</a> ·
+        Maadi, Cairo
+      </small>
+      <div class="social">
+        <a href="https://web.facebook.com/profile.php?id=61579221034971&_rdc=1&_rdr#" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/itqansolutions/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/itqansolutions/about/?viewAsMember=true" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+/* ===================== i18n ===================== */
+const translations = {
+  en: {
+    slogan: 'We Do Everything the itqan way.',
+    nav_services: 'Services',
+    nav_about: 'About',
+    nav_contact: 'Contact',
+    nav_home: 'Home',
+    eyebrow: 'Software • POS • Websites • Marketing',
+    hero_title: 'Build fast. Sell smarter. Market better.',
+    hero_sub: 'We deliver end-to-end solutions: offline/online POS, custom websites, and complete digital marketing — all crafted to grow your business.',
+    card_title: 'What we deliver',
+    card_li1: 'Point of Sale systems with licensing & multi-language support',
+    card_li2: 'Modern, fast websites (landing pages, company sites, catalogs)',
+    card_li3: 'Full digital marketing (strategy, content, ads, analytics)',
+    services_title: 'Our Services',
+    services_note: 'Pick what you need now — scale later.',
+    svc_pos_desc: 'Offline/online POS with licensing, Arabic/English UI, receipts, reports, and stock control.',
+    svc_web_desc: 'Company sites, landing pages, and product catalogs with SEO and blazing performance.',
+    svc_mkt_desc: 'Strategy, content, and ads to drive leads on all major platforms with clear reporting.',
+    svc_btn: 'Get a quote',
+    about_title: 'About Itqan',
+    about_note: '5+ years building solid solutions for growing businesses.',
+    about_p1: 'We are a Cairo-based team delivering software, POS systems, websites, and full-stack marketing. We believe technology is the key to growth and excellence.',
+    about_p2: 'From concept to launch, we handle the whole journey with reliability, speed, and measurable results.',
+    contact_text: 'Ready to start? Reach us on WhatsApp or email and we’ll get back fast.',
+    contact_whatsapp: 'WhatsApp',
+    contact_email: 'Email us',
+    form_name: 'Your name',
+    form_email: 'Email',
+    form_phone: 'Phone (optional)',
+    form_service: 'Service',
+    form_message: 'Your message',
+    form_consent: 'I agree to be contacted by Itqan via email/phone.',
+    form_send: 'Send message',
+    svc_apps_title: 'Mobile Apps',
+    svc_apps_desc: 'iOS/Android apps with modern stacks and smooth UX.',
+    svc_ecom_title: 'E-commerce',
+    svc_ecom_desc: 'Stores, payments, shipping integrations, and inventory sync.',
+    svc_brand_title: 'Branding & Design',
+    svc_brand_desc: 'Logos, brand systems, and marketing assets that stand out.',
+    svc_seo_title: 'SEO & Analytics',
+    svc_seo_desc: 'Technical SEO, content, and dashboards to track ROI.',
+    svc_cloud_title: 'Cloud & DevOps',
+    svc_cloud_desc: 'Deployments, CI/CD, monitoring, and cost optimization.',
+    svc_support_title: 'Maintenance & Support',
+    svc_support_desc: 'SLAs, updates, security patches, and performance tuning.',
+    badge_pos: 'POS (Offline/Online)',
+    badge_web: 'Web Development',
+    badge_mkt: 'Digital Marketing',
+    cta_talk: 'Talk to us',
+    cta_services: 'Explore services',
+    svc_pos_title: 'POS Systems',
+    svc_web_title: 'Websites',
+    svc_mkt_title: 'Digital Marketing',
+    opt_pos: 'POS Systems',
+    opt_web: 'Websites',
+    opt_mkt: 'Digital Marketing',
+    opt_other: 'Other',
+    ph_name: 'John Doe',
+    ph_email: 'you@email.com',
+    ph_phone: '+20 ...',
+    ph_message: 'Tell us about your project...',
+    loading: 'Loading...',
+    page_title: 'Itqan Solutions — Software • POS • Websites • Marketing'
+  },
+  ar: {
+    slogan: 'ننجز كل شيء بطريقتنا في الإتقان.',
+    nav_services: 'خدماتنا',
+    nav_about: 'من نحن',
+    nav_contact: 'تواصل',
+    nav_home: 'الرئيسية',
+    eyebrow: 'برمجيات • نقاط بيع • مواقع • تسويق',
+    hero_title: 'ابنِ بسرعة. بِع بذكاء. وسّع تسويقك.',
+    hero_sub: 'نقدّم حلولًا متكاملة: نقاط بيع أونلاين/أوفلاين، مواقع مخصّصة، وتسويق رقمي كامل — مصممة لنمو أعمالك.',
+    card_title: 'ماذا نقدّم',
+    card_li1: 'أنظمة نقاط بيع مع ترخيص ودعم لغتين',
+    card_li2: 'مواقع حديثة وسريعة (لاندنج، مواقع شركات، كاتالوجات)',
+    card_li3: 'تسويق رقمي كامل (استراتيجية، محتوى، إعلانات، تحليلات)',
+    services_title: 'خدماتنا',
+    services_note: 'ابدأ بما تحتاجه الآن — ووسّع لاحقًا.',
+    svc_pos_desc: 'نقاط بيع أونلاين/أوفلاين مع ترخيص، واجهة عربية/إنجليزية، فواتير وتقارير ومخزون.',
+    svc_web_desc: 'مواقع شركات وصفحات هبوط وكاتالوجات بتهيئة محركات البحث وأداء سريع.',
+    svc_mkt_desc: 'استراتيجية ومحتوى وإعلانات لزيادة العملاء على المنصات الرئيسية مع تقارير واضحة.',
+    svc_btn: 'احصل على عرض سعر',
+    about_title: 'من نحن',
+    about_note: 'أكثر من 5 سنوات في بناء حلول قوية للأعمال.',
+    about_p1: 'نحن فريق مقره القاهرة نقدّم برمجيات وأنظمة نقاط بيع ومواقع وتسويقًا رقميًا متكاملًا. نؤمن أن التقنية مفتاح للنمو والتميّز.',
+    about_p2: 'من الفكرة للإطلاق، ندير الرحلة كاملةً بموثوقية وسرعة ونتائج قابلة للقياس.',
+    contact_text: 'جاهز للبدء؟ تواصل معنا على واتساب أو البريد وسنرد سريعًا.',
+    contact_whatsapp: 'واتساب',
+    contact_email: 'راسلنا',
+    form_name: 'اسمك',
+    form_email: 'البريد الإلكتروني',
+    form_phone: 'الهاتف (اختياري)',
+    form_service: 'الخدمة',
+    form_message: 'رسالتك',
+    form_consent: 'أوافق على التواصل معي عبر البريد/الهاتف.',
+    form_send: 'إرسال الرسالة',
+    svc_apps_title: 'تطبيقات موبايل',
+    svc_apps_desc: 'تطبيقات iOS/Android بتقنيات حديثة وتجربة استخدام سلسة.',
+    svc_ecom_title: 'متاجر إلكترونية',
+    svc_ecom_desc: 'متاجر، مدفوعات، شحن، ومزامنة المخزون.',
+    svc_brand_title: 'الهوية والتصميم',
+    svc_brand_desc: 'شعارات وأنظمة هوية وأصول تسويقية مميّزة.',
+    svc_seo_title: 'SEO والتحليلات',
+    svc_seo_desc: 'تهيئة تقنية ومحتوى ولوحات مؤشرات لقياس العائد.',
+    svc_cloud_title: 'سحابة وDevOps',
+    svc_cloud_desc: 'نشر، CI/CD، مراقبة، وتحسين التكلفة.',
+    svc_support_title: 'صيانة ودعم',
+    svc_support_desc: 'اتفاقيات مستوى خدمة، تحديثات، أمان، وتحسين أداء.',
+    badge_pos: 'نقاط بيع (أوفلاين/أونلاين)',
+    badge_web: 'تطوير مواقع',
+    badge_mkt: 'تسويق رقمي',
+    cta_talk: 'تواصل معنا',
+    cta_services: 'تعرّف على الخدمات',
+    svc_pos_title: 'أنظمة نقاط البيع',
+    svc_web_title: 'المواقع الإلكترونية',
+    svc_mkt_title: 'التسويق الرقمي',
+    opt_pos: 'أنظمة نقاط البيع',
+    opt_web: 'المواقع الإلكترونية',
+    opt_mkt: 'التسويق الرقمي',
+    opt_other: 'أخرى',
+    ph_name: 'محمد أحمد',
+    ph_email: 'you@email.com',
+    ph_phone: '+20 ...',
+    ph_message: 'احكلنا عن مشروعك...',
+    loading: 'جارٍ التحميل...',
+    page_title: 'حلول إتقان — برمجيات • نقاط بيع • مواقع • تسويق'
+  }
+};
+
+const langToggleBtn = document.getElementById('langToggle');
+
+function applyLang(lang) {
+  const dict = translations[lang] || translations.en;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  if (langToggleBtn) {
+    langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR';
+    langToggleBtn.setAttribute('aria-label', lang === 'ar' ? 'Switch language to English' : 'حوّل اللغة إلى العربية');
+  }
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (dict[key]) el.setAttribute('placeholder', dict[key]);
+  });
+  document.title = dict.page_title || 'Itqan Solutions — We Do Everything the itqan way';
+}
+
+const savedLang = localStorage.getItem('itqan_lang') || (navigator.language?.startsWith('ar') ? 'ar' : 'en');
+applyLang(savedLang);
+
+langToggleBtn?.addEventListener('click', () => {
+  const current = document.documentElement.lang || 'en';
+  const next = current === 'ar' ? 'en' : 'ar';
+  applyLang(next);
+  localStorage.setItem('itqan_lang', next);
+});
+
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Hero video safe play + reduced motion
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+const heroVid = document.getElementById('heroVideo');
+function safePlay(){ if(!heroVid) return; const p=heroVid.play(); if(p?.catch) p.catch(()=>{}); }
+function handleMotion(){ if(!heroVid) return; if(prefersReduced.matches){ heroVid.pause(); heroVid.removeAttribute('autoplay'); } else { safePlay(); } }
+prefersReduced.addEventListener('change', handleMotion);
+document.addEventListener('visibilitychange', ()=>{ if(!heroVid) return; if(document.hidden) heroVid.pause(); else safePlay(); });
+heroVid?.addEventListener('error', ()=>console.warn('Hero video error:', heroVid?.error));
+handleMotion();
+
+// Reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal-visible'); io.unobserve(e.target); } });
+}, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Scrollspy
+const sections = ['home','services','about','contact'];
+const links = Array.from(document.querySelectorAll('.menu a[data-section]'));
+const sectionEls = sections.map(id => document.getElementById(id) || document.querySelector(`#${id}`)).filter(Boolean);
+const spy = new IntersectionObserver((ents) => {
+  ents.forEach(ent => {
+    const id = ent.target.getAttribute('id');
+    const link = links.find(a => a.dataset.section === id);
+    if (!link) return;
+    if (ent.isIntersecting) { links.forEach(a => a.classList.remove('active')); link.classList.add('active'); }
+  });
+}, { threshold: 0.4 });
+sectionEls.forEach(el => spy.observe(el));
+
+// Loader hide
+(function(){
+  const loader = document.getElementById('appLoader');
+  const minWait = new Promise(r => setTimeout(r, 600));
+  const fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  Promise.all([minWait, fontsReady]).then(() => {
+    loader?.classList.add('hide');
+    setTimeout(()=> loader?.remove(), 700);
+  });
+})();
+  </script>
+</body>
+</html>
